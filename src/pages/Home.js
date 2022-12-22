@@ -26,7 +26,9 @@ const Home = () => {
         e.preventDefault()
         if (user.roomID && user.userName) {
             toast.success("Room ID Created Successfully!!")
-            navigate("Editor/jjjj")
+            navigate(`Editor/${user.roomID}`,{
+                state : user
+            })
         }
         else {
             toast.error("Room Id & Username are required!!", {
